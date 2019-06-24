@@ -12,7 +12,7 @@
               tools:layout="@layout/fragment_main">
         <action android:id="@+id/action_mainFragment_to_chooseRecipientFragment"
                 app:destination="@id/chooseRecipientFragment"
-                
+
         />
 
         <action android:id="@+id/action_mainFragment_to_viewTransactionFragment"
