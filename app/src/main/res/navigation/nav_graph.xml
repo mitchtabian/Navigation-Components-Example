@@ -12,25 +12,14 @@
               tools:layout="@layout/fragment_main">
         <action android:id="@+id/action_mainFragment_to_chooseRecipientFragment"
                 app:destination="@id/chooseRecipientFragment"
-                app:popEnterAnim="@anim/slide_in_left"
-                app:popExitAnim="@anim/slide_out_right"
-                app:enterAnim="@anim/slide_in_right"
-                app:exitAnim="@anim/slide_out_left"
+                
         />
 
         <action android:id="@+id/action_mainFragment_to_viewTransactionFragment"
                 app:destination="@id/viewTransactionFragment"
-                app:popEnterAnim="@anim/slide_in_left"
-                app:popExitAnim="@anim/slide_out_right"
-                app:enterAnim="@anim/slide_in_right"
-                app:exitAnim="@anim/slide_out_left"
         />
         <action android:id="@+id/action_mainFragment_to_viewBalanceFragment"
                 app:destination="@id/viewBalanceFragment"
-                app:popEnterAnim="@anim/slide_in_left"
-                app:popExitAnim="@anim/slide_out_right"
-                app:enterAnim="@anim/slide_in_right"
-                app:exitAnim="@anim/slide_out_left"
         />
     </fragment>
 
@@ -49,10 +38,6 @@
               tools:layout="@layout/fragment_choose_recipient">
         <action android:id="@+id/action_chooseRecipientFragment_to_specifyAmountFragment"
                 app:destination="@id/specifyAmountFragment"
-                app:popEnterAnim="@anim/slide_in_left"
-                app:popExitAnim="@anim/slide_out_right"
-                app:enterAnim="@anim/slide_in_right"
-                app:exitAnim="@anim/slide_out_left"
         />
     </fragment>
 
@@ -73,10 +58,6 @@
 
         <action android:id="@+id/action_specifyAmountFragment_to_confirmationFragment"
                 app:destination="@id/confirmationFragment"
-                app:popEnterAnim="@anim/slide_in_left"
-                app:popExitAnim="@anim/slide_out_right"
-                app:enterAnim="@anim/slide_in_right"
-                app:exitAnim="@anim/slide_out_left"
         />
     </fragment>
 
