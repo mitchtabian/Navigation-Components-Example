@@ -10,8 +10,8 @@
               android:name="com.codingwithmitch.navigationcomponentsexample.MainFragment"
               android:label="fragment_main"
               tools:layout="@layout/fragment_main">
-        <action android:id="@+id/action_mainFragment_to_chooseRecipeFragment"
-                app:destination="@id/chooseRecipeFragment"
+        <action android:id="@+id/action_mainFragment_to_chooseRecipientFragment"
+                app:destination="@id/chooseRecipientFragment"
                 app:popEnterAnim="@anim/slide_in_left"
                 app:popExitAnim="@anim/slide_out_right"
                 app:enterAnim="@anim/slide_in_right"
@@ -42,12 +42,12 @@
               tools:layout="@layout/fragment_view_transaction"/>
 
 
-    <!-- ChooseRecipeFragment -->
-    <fragment android:id="@+id/chooseRecipeFragment"
-              android:name="com.codingwithmitch.navigationcomponentsexample.ChooseRecipeFragment"
-              android:label="fragment_choose_recipe"
-              tools:layout="@layout/fragment_choose_recipe">
-        <action android:id="@+id/action_chooseRecipeFragment_to_specifyAmountFragment"
+    <!-- ChooserecipientFragment -->
+    <fragment android:id="@+id/chooseRecipientFragment"
+              android:name="com.codingwithmitch.navigationcomponentsexample.ChooseRecipientFragment"
+              android:label="fragment_choose_recipient"
+              tools:layout="@layout/fragment_choose_recipient">
+        <action android:id="@+id/action_chooseRecipientFragment_to_specifyAmountFragment"
                 app:destination="@id/specifyAmountFragment"
                 app:popEnterAnim="@anim/slide_in_left"
                 app:popExitAnim="@anim/slide_out_right"

@@ -11,7 +11,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 
 
-class ChooseRecipeFragment : Fragment(), View.OnClickListener {
+class ChooseRecipientFragment : Fragment(), View.OnClickListener {
 
     var navController: NavController? = null
 
@@ -20,7 +20,7 @@ class ChooseRecipeFragment : Fragment(), View.OnClickListener {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_choose_recipe, container, false)
+        return inflater.inflate(R.layout.fragment_choose_recipient, container, false)
     }
 
 
@@ -28,11 +28,14 @@ class ChooseRecipeFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
         view.findViewById<Button>(R.id.next_btn).setOnClickListener(this)
+        view.findViewById<Button>(R.id.cancel_btn).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when(v!!.id){
-            R.id.next_btn -> navController!!.navigate(R.id.action_chooseRecipeFragment_to_specifyAmountFragment)
+            R.id.next_btn -> navController!!.navigate(R.id.action_chooseRecipientFragment_to_specifyAmountFragment)
+
+            R.id.cancel_btn -> activity!!.onBackPressed()
         }
     }
 }

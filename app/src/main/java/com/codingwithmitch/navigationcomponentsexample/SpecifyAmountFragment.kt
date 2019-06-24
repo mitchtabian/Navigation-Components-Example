@@ -26,11 +26,14 @@ class SpecifyAmountFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
         view.findViewById<Button>(R.id.send_btn).setOnClickListener(this)
+        view.findViewById<Button>(R.id.cancel_btn).setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when(v!!.id){
             R.id.send_btn -> navController!!.navigate(R.id.action_specifyAmountFragment_to_confirmationFragment)
+
+            R.id.cancel_btn -> activity!!.onBackPressed()
         }
     }
 }
