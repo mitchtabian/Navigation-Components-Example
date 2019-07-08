@@ -19,8 +19,8 @@ import java.math.BigDecimal
 
 class SpecifyAmountFragment : Fragment(), View.OnClickListener {
 
-    var navController: NavController? = null
-    var recipient: String? = null
+    lateinit var navController: NavController
+    lateinit var recipient: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

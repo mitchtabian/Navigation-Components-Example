@@ -13,7 +13,7 @@ import androidx.navigation.Navigation
 
 class MainFragment : Fragment(), View.OnClickListener {
 
-    var navController: NavController? = null
+    lateinit var navController: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

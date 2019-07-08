@@ -12,8 +12,8 @@ import android.widget.TextView
 
 class ConfirmationFragment : Fragment() {
 
-    var recipient: String? = null
-    var money: Money? = null
+    lateinit var recipient: String
+    lateinit var money: Money
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

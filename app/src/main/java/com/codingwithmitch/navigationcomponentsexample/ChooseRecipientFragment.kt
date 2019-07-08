@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.fragment_choose_recipient.*
 
 class ChooseRecipientFragment : Fragment(), View.OnClickListener {
 
-    var navController: NavController? = null
+    lateinit var navController: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
