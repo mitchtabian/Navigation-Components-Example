@@ -24,7 +24,7 @@ class SpecifyAmountFragment : Fragment(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        recipient = arguments!!.getString("recipient")
+        recipient = arguments?.getString("recipient") ?: "UNKNOWN"
 
 
     }
@@ -55,7 +55,7 @@ class SpecifyAmountFragment : Fragment(), View.OnClickListener {
                         "recipient" to recipient,
                         "amount" to amount
                     )
-                    navController!!.navigate(
+                    navController.navigate(
                         R.id.action_specifyAmountFragment_to_confirmationFragment,
                         bundle
                     )

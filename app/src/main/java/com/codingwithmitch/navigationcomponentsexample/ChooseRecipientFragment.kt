@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.fragment_choose_recipient.*
 
 class ChooseRecipientFragment : Fragment(), View.OnClickListener {
 
-    lateinit var navController: NavController
+    private lateinit var navController: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,7 +40,7 @@ class ChooseRecipientFragment : Fragment(), View.OnClickListener {
             R.id.next_btn -> {
                 if(!TextUtils.isEmpty(input_recipient.text.toString())){
                     val bundle = bundleOf("recipient" to input_recipient.text.toString())
-                    navController!!.navigate(
+                    navController.navigate(
                         R.id.action_chooseRecipientFragment_to_specifyAmountFragment,
                         bundle
                     )
@@ -50,7 +50,7 @@ class ChooseRecipientFragment : Fragment(), View.OnClickListener {
                 }
             }
 
-            R.id.cancel_btn -> activity!!.onBackPressed()
+            R.id.cancel_btn -> activity?.onBackPressed()
         }
     }
 }
