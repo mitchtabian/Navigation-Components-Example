@@ -7,18 +7,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-
+import java.math.BigDecimal
 
 
 class ConfirmationFragment : Fragment() {
 
-    lateinit var recipient: String
-    lateinit var money: Money
+    private lateinit var recipient: String
+    private lateinit var money: Money
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        recipient = arguments!!.getString("recipient")
-        money = arguments!!.getParcelable("amount")
+        recipient = arguments?.getString("recipient") ?: "UNKNOWN"
+        money = arguments?.getParcelable("amount") ?: Money(BigDecimal.ZERO)
 
     }
 
@@ -32,7 +32,7 @@ class ConfirmationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val amount = money!!.amount
+        val amount = money.amount
         val confirmationMessage = "You have sent $amount to $recipient"
         view.findViewById<TextView>(R.id.confirmation_message).text = confirmationMessage
     }
