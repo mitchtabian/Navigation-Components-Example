@@ -24,7 +24,7 @@ class SpecifyAmountFragment : Fragment(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        recipient = arguments!!.getString("recipient")
+        recipient = requireArguments().getString("recipient").toString()
 
 
     }
@@ -48,9 +48,9 @@ class SpecifyAmountFragment : Fragment(), View.OnClickListener {
     override fun onClick(v: View?) {
         when(v!!.id){
             R.id.send_btn -> {
-                if(!TextUtils.isEmpty(input_amount.text.toString())){
+                if(!TextUtils.isEmpty(R.id.input_amount.toString())){
 
-                    val amount = Money(BigDecimal(input_amount.text.toString()))
+                    val amount = Money(BigDecimal(R.id.input_amount.toString()))
                     val bundle = bundleOf(
                         "recipient" to recipient,
                         "amount" to amount
@@ -65,7 +65,7 @@ class SpecifyAmountFragment : Fragment(), View.OnClickListener {
                 }
             }
 
-            R.id.cancel_btn -> activity!!.onBackPressed()
+            R.id.cancel_btn -> requireActivity().onBackPressed()
         }
     }
 }
